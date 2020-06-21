@@ -1,0 +1,67 @@
+.main
+    position: relative
+    height: 100vh
+    background: url(../img/main_bg.jpg) center center/cover no-repeat
+    &__box
+        width: 300px
+        height: 300px
+        position: absolute
+        top: 20%
+        left: 50%
+        transform: translatex(-50%)
+        border: 5px double rgba(255,255,255,.8)
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 250px
+        height: 250px
+        background-color: rgba(255, 255, 255, .8)
+        h2
+            padding: 0 0 30px
+        .typed
+            height: 50px
+            width: 200px
+            text-align: center
+            pre
+                display: inline
+                text-align: center
+
+    &__arrow
+        position: absolute
+        bottom: 10%
+        left: 50%
+        transform: translatex(-50%)
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .chevron
+        position: absolute
+        width: 50px
+        height: 15px
+        opacity: 0
+        transform: scale(0.3)
+        animation: move-chevron 2s ease-out infinite
+        &:first-child
+            animation: move-chevron 2s ease-out .7s infinite
+        &:nth-child(2)
+            animation: move-chevron 2s ease-out 1.4s infinite
+        &:before, &:after
+            content: ''
+            position: absolute
+            top: 0
+            height: 100%
+            width: 50%
+            background: rgba(0, 0, 0, .8)
+        &:before
+            left: 0
+            transform: skewY(40deg)
+        &:after
+            right: 0
+            transform: skewY(-40deg)

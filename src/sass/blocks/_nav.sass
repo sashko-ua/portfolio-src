@@ -1,0 +1,65 @@
+.nav
+    position: fixed
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 50px
+    width: 100vw
+    background-color: rgba(0, 0, 0, .8)
+    padding: 0 100px
+    z-index: 100
+    &__logo
+        a
+            color: #fff
+            font-weight: 700
+            font-size: 27px
+            text-decoration: none
+    .menu
+        position: absolute
+        top: 50px
+        right: -100%
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        height: 100vh
+        width: 30vw
+        background-color: rgba(0, 0, 0, .8)
+        padding: 0 0 150px 0
+        transition: .6s all
+        &__item
+            color: #fff
+            list-style: none
+            text-align: center
+            a
+
+                display: block
+                font-size: 35px
+                color: #fff
+                text-transform: uppercase
+                text-decoration: none
+        &_active
+            right: 0
+
+    .hamburger
+        width: 110px
+        padding: 5px 35px
+        &:hover
+            cursor: pointer
+        span
+            display: block
+            margin: 5px 0
+            height: 3px
+            background-color: #fff
+            transition: .8s all
+            &:hover
+                cursor: pointer
+        &_active
+            span
+                padding: 4px 15px
+                margin-bottom: -13px
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-135deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px) rotate(135deg)
