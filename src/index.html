@@ -18,22 +18,19 @@
         </div>
         <ul class="menu">
             <li class="menu__item">
-                <a href="#Home">Home</a>
+                <a class="scroll-to" href="#Home">Home</a>
             </li>
             <li class="menu__item">
-                <a href="#About">About</a>
+                <a class="scroll-to" href="#About">About</a>
             </li>
             <li class="menu__item">
-                <a href="#Education">Education</a>
+                <a class="scroll-to" href="#Education">Education</a>
             </li>
             <li class="menu__item">
-                <a href="#Skills">Skills</a>
+                <a class="scroll-to" href="#Skills">Skills</a>
             </li>
             <li class="menu__item">
-                <a href="#Work">Work</a>
-            </li>
-            <li class="menu__item">
-                <a href="#Contact">Contact</a>
+                <a class="scroll-to" href="#Work">Work</a>
             </li>
         </ul>
 
@@ -68,14 +65,14 @@
                 <img class="about__photo" src="img/photo.jpg" alt="">
             </div>
             <div class="col-sm-12 col-md-7">
-                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="why">
+                            <div class=" why">
                                 <h3>Hi, welcome to my site!</h3>My name is Sashko Shablenskyi, I’m a beginner web
                                 developer, 25
                                 years old. Was born in Kryvyi ryh, Ukraine, but now based in Lviv. Self educated ( can
@@ -89,7 +86,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <table class="d-block w-100" class="table">
+                            <table>
                                 <tr>
                                     <td class="contact">Name</td>
                                     <td class="break">:</td>
@@ -138,22 +135,22 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="education__text">
-                        <h2 class="title">Education</h2><span>Gallery of my programming certificates.</span>
+                        <h2 class="title">Education</h2>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <div class="education__box">
-                        <a data-fancybox="gallery" href="img/education/HTML-Sololearn.jpg">
-                            <img class="click" src="icons/tap.svg" alt="click">
+                        <a href="img/education/HTML-Sololearn.jpg">
+                            <img src="img/education/HTML-Sololearn.jpg" alt="">
                         </a>
-                        <a data-fancybox="gallery" href="img/education/CSS-Sololearn.jpg">
-                            <img class="click" src="icons/tap.svg" alt="click">
+                        <a href="img/education/CSS-Sololearn.jpg">
+                            <img src="img/education/CSS-Sololearn.jpg" alt="">
                         </a>
-                        <a data-fancybox="gallery" href="img/education/Python-Sololearn.jpg">
-                            <img class="click" src="icons/tap.svg" alt="click">
+                        <a href="img/education/Python-Sololearn.jpg">
+                            <img src="img/education/Python-Sololearn.jpg" alt="">
                         </a>
-                        <a data-fancybox="gallery" href="img/education/HTML+CSS-Udemy.jpg">
-                            <img class="click" src="icons/tap.svg" alt="click">
+                        <a href="img/education/HTML+CSS-Udemy.jpg">
+                            <img src="img/education/HTML+CSS-Udemy.jpg" alt="">
                         </a>
                     </div>
                 </div>
@@ -169,30 +166,27 @@
                 </div>
                 <div class="col-md-9">
                     <div class="skills__box">
+                        <h2>HTML</h2>
                         <div class="skills__bar">
-                            <div class="skills__progress html wow"></div>
-                            <div class="head-sm">HTML</div>
-                            <div class="skills__count"><span>79%</span></div>
+                            <div class="skills__value skills__value_html wow">81%</div>
                         </div>
+                    </div>
+                    <div class="skills__box">
+                        <h2>CSS</h2>
                         <div class="skills__bar">
-                            <div class="skills__progress css wow"></div>
-                            <div class="head-sm">CSS</div>
-                            <div class="skills__count"><span>73%</span></div>
+                            <div class="skills__value skills__value_css wow">73%</div>
                         </div>
+                    </div>
+                    <div class="skills__box">
+                        <h2>JavaScript</h2>
                         <div class="skills__bar">
-                            <div class="skills__progress javascript wow"></div>
-                            <div class="head-sm">JavaScript</div>
-                            <div class="skills__count"><span>25%</span></div>
+                            <div class="skills__value skills__value_js wow">20%</div>
                         </div>
+                    </div>
+                    <div class="skills__box">
+                        <h2>Photoshop</h2>
                         <div class="skills__bar">
-                            <div class="skills__progress photoshop wow"></div>
-                            <div class="head-sm">Photoshop</div>
-                            <div class="skills__count"><span>93%</span></div>
-                        </div>
-                        <div class="skills__bar">
-                            <div class="skills__progress python wow"></div>
-                            <div class="head-sm">Python</div>
-                            <div class="skills__count"><span>35%</span></div>
+                            <div class="skills__value skills__value_photoshop wow">89%</div>
                         </div>
                     </div>
                 </div>
@@ -208,28 +202,52 @@
                 </div>
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="col-md-5"><a href="projects/OPT/index.html" target="_blank"><img
-                                    src="img/work/OPT.png" alt=""></a></div>
-                        <div class="col-md-5"><a href="projects/MoGo/index.html" target="_blank"><img
-                                    src="img/work/MoGo.png" alt=""></a></div>
-                        <div class="col-md-5"><a href="projects/Piano/index.html" target="_blank"><img
-                                    src="img/work/piano.png" alt=""></a></div>
+                        <div class="col-md-6">
+                            <a href="projects/OPT/index.html" target="_blank">
+                                <img src="img/work/OPT.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="projects/MoGo/index.html" target="_blank">
+                                <img src="img/work/MoGo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="projects/Piano/index.html" target="_blank">
+                                <img src="img/work/piano.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="http://myvoice.pro/marathon.html" target="_blank">
+                                <img src="img/work/MyVoice.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <a class="scroll-to" href="#Home">
+            <div class="arrow-up " id="arrow-up">
+                <div class="chevron-up"></div>
+                <div class="chevron-up"></div>
+                <div class="chevron-up"></div>
+            </div>
+        </a>
     </section>
 
     <div class="footer">
-        <div class="footer__wrapper">
-            <div class="footer__social"><a href="https://www.linkedin.com/in/sashko-shablenskyi-4b76881a3/">LinkedIn</a>
-            </div>
-            <div class="footer__social"><a href="https://www.instagram.com/_sashko_ua_/">Instagram</a></div>
-            <div class="footer__social"><a href="https://github.com/sashko-ua">GitHub</a></div>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/sashko-shablenskyi-4b76881a3/">LinkedIn</a>
+        </div>
+        <div class="footer__social">
+            <a href="https://www.instagram.com/_sashko_ua_/">Instagram</a>
+        </div>
+        <div class="footer__social">
+            <a href="https://github.com/sashko-ua">GitHub</a>
         </div>
     </div>
 
-    <div><a class="arrow" href="#Home"><span></span> <span></span> <span></span></a></div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -243,7 +261,6 @@
         crossorigin="anonymous"></script>
     <script src="js/typed.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>

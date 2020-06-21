@@ -41,27 +41,27 @@
         justify-content: center
         align-items: center
 
-    .chevron
-        position: absolute
-        width: 50px
-        height: 15px
-        opacity: 0
-        transform: scale(0.3)
-        animation: move-chevron 2s ease-out infinite
-        &:first-child
-            animation: move-chevron 2s ease-out .7s infinite
-        &:nth-child(2)
-            animation: move-chevron 2s ease-out 1.4s infinite
-        &:before, &:after
-            content: ''
+        .chevron
             position: absolute
-            top: 0
-            height: 100%
-            width: 50%
-            background: rgba(0, 0, 0, .8)
-        &:before
-            left: 0
-            transform: skewY(40deg)
-        &:after
-            right: 0
-            transform: skewY(-40deg)
+            width: 50px
+            height: 15px
+            opacity: 0
+            transform: scale(0.3)
+            animation: move-chevron 2s ease-out infinite
+            &:first-child
+                animation: move-chevron 2s ease-out .7s infinite
+            &:nth-child(2)
+                animation: move-chevron 2s ease-out 1.4s infinite
+            &:before, &:after
+                content: ''
+                position: absolute
+                top: 0
+                height: 100%
+                width: 50%
+                background: rgba(0, 0, 0, .8)
+            &:before
+                left: 0
+                transform: skewY(40deg)
+            &:after
+                right: 0
+                transform: skewY(-40deg)
