@@ -31,11 +31,26 @@ $(document).ready(function () {
         loop: true
     });
 
+    // __________POPUP__________
+    $('.image-link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true,
+        },
+        zoom: {
+            enabled: true,
+            duration: 400,
+            easing: 'ease-in-out',
+        },
+        closeBtnInside: false,
+        closeOnBgClick: false
+    });
+
     // __________SCROLLING ARROW__________
     const arrowUP = document.getElementById('arrow-up');
 
     arrowUP.onclick = function () {
-        window.scrollTo(pageXOffset, 0);
+        window.scrollTo(pageXOffset, 1500);
     };
 
     window.addEventListener('scroll', function () {

@@ -2,20 +2,29 @@
     min-height: 500px
     padding: 80px 0
     background-color: rgba(0, 0, 0, .1)
-    &__box
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
-        width: 800px
-        img
-            width: 350px
-            margin: 0 25px 25px 0
-            &::after
-                content: ''
-                position: absolute
-                top: 0
-                left: 0
-                display: block
-                height: 100%
-                width: 350px
-                background-color: rgba(0, 0, 0, .8)
+    .col-md-6
+        padding: 0
+    img
+        width: 100%
+        height: 300px
+        opacity: .5
+        border: none
+        border: 15px solid rgba(0, 0, 0, 0)
+        &:hover
+            cursor: zoom-in
+            opacity: 1
+            border: none
+            border: px solid $blue
+
+.mfp-close
+    font-size: 50px
+    font-weight: 700
+    right: 5%
+    top: 15px
+    &:hover
+        color: $blue
+.mfp-zoom-out-cur
+    cursor: auto
+.mfp-arrow
+    &:hover
+        background-color: $blue
