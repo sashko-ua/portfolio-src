@@ -1,7 +1,6 @@
 {
-  "name": "fortepiano",
-  "version": "1.0.0",
-  "description": "",
+  "name": "portfolio",
+  "version": "2.0.0",
   "main": "index.js",
   "devDependencies": {
     "browser-sync": "^2.26.7",
@@ -30,5 +29,6 @@
   "homepage": "https://github.com/Sashko-Ua/checkGit#readme",
   "dependencies": {
     "jquery": "^3.5.0"
-  }
+  },
+  "description": ""
 }
