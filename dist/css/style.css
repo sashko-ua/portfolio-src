@@ -1,6 +1,24 @@
-.displayNone {
-  display: none;
-  opacity: 0;
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #87C2C4;
+  border-radius: 15px;
+  border: 3px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fff;
+  border: 3px solid #000;
 }
 
 @-webkit-keyframes move-chevron {
@@ -752,58 +770,75 @@ img.mfp-img {
 
 .about {
   font-family: 'Caveat Regular';
-}
-
-.about .row,
-.about .col-md-4 {
-  padding: 0;
-  margin: 0;
+  position: relative;
 }
 
 .about__photo {
   width: 100%;
 }
 
-.about .carousel {
-  height: 100%;
+.about .tab {
+  height: 90%;
   width: 100%;
 }
 
-.about .carousel li {
-  background-color: #000;
-  width: 45px;
-  height: 8px;
-}
-
-.about .carousel-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.about .tab__item {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 250px;
+  padding: 10px 80px;
+  font-size: 40px;
 }
 
-.about .carousel-inner .why {
-  font-size: 30px;
+.about .tab__item_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.about .carousel-inner .why h3 {
-  font-weight: 700;
-  font-size: 35px;
-}
-
-.about .carousel-inner .carousel-item {
-  font-size: 35px;
-}
-
-.about .carousel-inner .carousel-item a {
+.about .tab__item a {
   color: #000;
   text-decoration: none;
 }
 
-.about .carousel-inner .carousel-item table {
+.about .tab__item a table a:hover {
+  color: #87C2C4;
+}
+
+.about .tab__indicators {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 25px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.about .tab__indicator {
+  list-style: none;
+  background-color: #b3b3b3;
+  width: 45px;
+  height: 8px;
+  margin: 0 10px 0 0;
+}
+
+.about .tab__indicator_active {
+  background-color: #87C2C4;
+}
+
+.about .tab .why {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -813,14 +848,16 @@ img.mfp-img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 30px;
 }
 
-.about .carousel-inner .carousel-item table .break {
-  padding: 0 20px;
-}
-
-.about .carousel-inner .carousel-item table a:hover {
-  color: #87C2C4;
+.about .tab .why h3 {
+  font-weight: 700;
+  font-size: 35px;
 }
 
 .education {
@@ -1037,49 +1074,24 @@ img.mfp-img {
   text-decoration: none;
 }
 
-@media (max-width: 1700px) {
-  .about .carousel-inner {
-    padding: 80px 200px;
-  }
-}
-
-@media (max-width: 1600px) {
-  .about .carousel-inner {
-    padding: 70px 150px;
-  }
-}
-
-@media (max-width: 1500px) {
-  .nav .menu {
-    width: 40vw;
-  }
-
-  .about .carousel-inner {
-    padding: 50px 100px;
-  }
-}
-
 @media (max-width: 1400px) {
-  .about .carousel-inner {
+  .about .tab__item {
     padding: 40px 100px;
   }
 
-  .about .carousel-inner .why {
-    font-size: 24px;
+  .about .tab__item .why {
+    font-size: 22px;
   }
 }
 
 @media (max-width: 1199px) {
-  .about .carousel-inner {
+  .about .tab__item {
+    font-size: 25px;
     padding: 60px 80px;
   }
 
-  .about .carousel-inner .why {
+  .about .tab__item .why {
     font-size: 20px;
-  }
-
-  .about .carousel-inner .carousel-item {
-    font-size: 25px;
   }
 
   .education img {
@@ -1115,33 +1127,26 @@ img.mfp-img {
     height: 260px;
   }
 
-  .about .carousel li {
+  .about .tab li {
     width: 30px;
     height: 6px;
   }
 
-  .about .carousel-inner {
+  .about .tab__item {
     padding: 15px 0;
-  }
-
-  .about .carousel-inner .carousel-item {
     font-size: 20px;
   }
 
-  .about .carousel-inner .carousel-item table {
+  .about .tab__item table {
     padding: 20px 0 0;
   }
 
-  .about .carousel-inner .why {
+  .about .tab__item .why {
     font-size: 17px;
   }
 
-  .about .carousel-inner .why h3 {
+  .about .tab__item .why h3 {
     font-size: 25px;
-  }
-
-  .about .carousel-indicators {
-    margin: 0;
   }
 
   .education img {
@@ -1248,25 +1253,22 @@ img.mfp-img {
     padding: 0 0 0 50px;
   }
 
-  .about .carousel-inner {
+  .about .tab__item {
     height: 450px;
     padding: 0 60px;
-  }
-
-  .about .carousel-inner .carousel-item {
     font-size: 25px;
   }
 
-  .about .carousel-inner .carousel-item table {
+  .about .tab__item table {
     padding: 0 0 20px;
     font-size: 30px;
   }
 
-  .about .carousel-inner .why {
+  .about .tab__item .why {
     font-size: 22px;
   }
 
-  .about .carousel-inner .why h3 {
+  .about .tab__item .why h3 {
     font-size: 25px;
   }
 
@@ -1294,7 +1296,7 @@ img.mfp-img {
 }
 
 @media (max-width: 510px) {
-  .about .carousel-inner {
+  .about .tab__item {
     padding: 0;
   }
 
@@ -1304,15 +1306,15 @@ img.mfp-img {
 }
 
 @media (max-width: 420px) {
-  .about .carousel-inner {
+  .about .tab__item {
     height: 450px;
   }
 
-  .about .carousel-inner .why {
+  .about .tab__item .why {
     font-size: 18px;
   }
 
-  .about .carousel-inner .carousel-item table {
+  .about .tab__item table {
     font-size: 23px;
   }
 }

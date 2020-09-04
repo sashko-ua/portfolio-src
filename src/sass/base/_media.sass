@@ -1,42 +1,21 @@
-@media ( max-width: 1700px )
-    // __________ABOUT__________
-    .about
-        .carousel-inner
-            padding: 80px 200px
-
-@media ( max-width: 1600px )
-    // __________ABOUT__________
-    .about
-        .carousel-inner
-            padding: 70px 150px
-
-@media ( max-width: 1500px )
-    // __________NAV__________
-    .nav
-        .menu
-            width: 40vw
-    // __________ABOUT__________
-    .about
-        .carousel-inner
-            padding: 50px 100px
-
 @media ( max-width: 1400px )
     // __________ABOUT__________
     .about
-        .carousel-inner
-            padding: 40px 100px
-            .why
-                font-size: 24px
+        .tab
+            &__item
+                padding: 40px 100px
+                .why
+                    font-size: 22px
 
 @media ( max-width: 1199px )
     // __________ABOUT__________
     .about
-        .carousel-inner
-            padding: 60px 80px
-            .why
-                font-size: 20px
-            .carousel-item
+        .tab
+            &__item
                 font-size: 25px
+                padding: 60px 80px
+                .why
+                    font-size: 20px
 
     // __________EDUCATION__________
     .education
@@ -68,22 +47,19 @@
 
     // __________ABOUT__________
     .about
-        .carousel
+        .tab
             li
                 width: 30px
                 height: 6px
-        .carousel-inner
-            padding: 15px 0
-            .carousel-item
+            &__item
+                padding: 15px 0
                 font-size: 20px
                 table
                     padding: 20px 0 0
-            .why
-                font-size: 17px
-                h3
-                    font-size: 25px
-        .carousel-indicators
-            margin: 0
+                .why
+                    font-size: 17px
+                    h3
+                        font-size: 25px
     // __________EDUCATION__________
     .education
         img
@@ -103,18 +79,18 @@
         padding: 0 0 0 50px
     // __________ABOUT__________
     .about
-        .carousel-inner
-            height: 450px
-            padding: 0 60px
-            .carousel-item
+        .tab
+            &__item
+                height: 450px
+                padding: 0 60px
                 font-size: 25px
                 table
                     padding: 0 0 20px
                     font-size: 30px
-            .why
-                font-size: 22px
-                h3
-                    font-size: 25px
+                .why
+                    font-size: 22px
+                    h3
+                        font-size: 25px
     // __________SKILLS__________
     .skills
         padding: 80px  0
@@ -136,8 +112,9 @@
 @media (max-width: 510px)
     // __________ABOUT__________
     .about
-        .carousel-inner
-            padding: 0
+        .tab
+            &__item
+                padding: 0
     // __________EDUCATION__________
     .education
         img
@@ -145,11 +122,11 @@
 
 @media (max-width: 420px)
     .about
-        .carousel-inner
-            height: 450px
-            .why
-                font-size: 18px
-            .carousel-item
+        .tab
+            &__item
+                height: 450px
+                .why
+                    font-size: 18px
                 table
                     font-size: 23px
 

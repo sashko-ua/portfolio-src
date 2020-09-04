@@ -32,7 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     // __________HAMBURGER__________
     const menu = document.querySelector('.menu'),
         menuItem = document.querySelectorAll('.menu__item'),
@@ -78,5 +77,14 @@ window.addEventListener('DOMContentLoaded', () => {
     //     closeOnBgClick: false
     // });
 
-    // __________Slider__________
+    // __________Tab__________
+    const btn = document.querySelector('.tab__indicators'),
+        item = document.querySelectorAll('.tab__item'),
+        indicators = document.querySelectorAll('.tab__indicator');
+
+    btn.addEventListener('click', () => {
+        item.forEach(e => e.classList.toggle('tab__item_active'));
+
+        indicators.forEach(e => e.classList.toggle('tab__indicator_active'));
+    });
 });
