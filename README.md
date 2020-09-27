@@ -1,4 +1,1 @@
-# portfolio-src
-
-repository with the source materials of my main page. 
-Just in case=)
+# portfolio src v2.0

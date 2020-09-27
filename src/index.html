@@ -1,283 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-</html>
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="freelancehunt" content="c9476749bd38211">
-
-    <!-- <link rel="shortcut icon" href="img/icons/favicons/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="img/icons/favicons/favicon-32x32.png" type="image/png"> -->
-
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="icons/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>Sashko</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
-    <nav class="nav">
-        <div class="nav__logo">
-            <a href="index.html">S.</a>
-        </div>
-        <ul class="menu">
-            <li class="menu__item">
-                <a class="scroll-to" href="#Home">Home</a>
-            </li>
-            <li class="menu__item">
-                <a class="scroll-to" href="#About">About</a>
-            </li>
-            <li class="menu__item">
-                <a class="scroll-to" href="#Education">Education</a>
-            </li>
-            <li class="menu__item">
-                <a class="scroll-to" href="#Skills">Skills</a>
-            </li>
-            <li class="menu__item">
-                <a class="scroll-to" href="#Work">Work</a>
-            </li>
-        </ul>
-
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-
-    </nav>
-
-    <section class="main" id="Home">
-        <div class="main__wrapper">
-            <div class="main__box">
-                <div class="main__content">
-                    <h2>HELLO!</h2>
-                    <div class="typed">
-                        <pre id="typed"></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main__arrow">
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-        </div>
-    </section>
-
-    <section class="about " id="About">
-        <div class="row">
-            <div class="col-sm-12 col-md-4">
-                <img class="about__photo" src="img/photo.jpg" alt="">
-            </div>
-            <div class="col-sm-12 col-md-8">
-                <div class="tab">
-                    <div class="tab__item  tab__item_active">
-                        <div class=" why">
-                            <h3>Hi, welcome to my site!</h3>
-                            My name is Sashko Shablenskyi, I’m a beginner web
-                            developer, 25
-                            years old. Was born in Kryvyi ryh, Ukraine, but now based in Lviv. Self educated ( can
-                            see my
-                            diplomas below) and self motivated.
-                            <br>
-                            I’m just starting programming, don’t have
-                            enough
-                            experience but have strong desire to be a Team lead of interesting projects and part of
-                            something helpful for people in our digital world!<br>
-                            Ukraine needs young people who
-                            keep
-                            pace with progress:)
-                        </div>
-                    </div>
-
-                    <div class="tab__item">
-                        <table>
-                            <tr>
-                                <td class="contact">Name</td>
-                                <td class="break">:</td>
-                                <td>Oleksandr Shablenskyi</td>
-                            </tr>
-                            <tr>
-                                <td class="contact">Phone</td>
-                                <td class="break">:</td>
-                                <td><a href="tel:+380683551885">+38(068)355 188 5</a></td>
-                            </tr>
-                            <tr>
-                                <td class="contact">E-mail</td>
-                                <td class="break">:</td>
-                                <td><a href="mailto:sashkoace@gmail.com">sashkoace@gmail.com</a></td>
-                            </tr>
-                            <tr>
-                                <td class="contact">Address</td>
-                                <td class="break">:</td>
-                                <td>Kryvyi Rih, Ukraine</td>
-                            </tr>
-                            <tr>
-                                <td class="contact">Skype</td>
-                                <td class="break">:</td>
-                                <td><a href="skype:sashkoace?call">sashkoace</a></td>
-                            </tr>
-                            <tr>
-                                <td class="contact">Instagram</td>
-                                <td class="break">:</td>
-                                <td><a href="https://www.instagram.com/_sashko_ua_/">_sashko_ua_</a></td>
-                            </tr>
-                            <tr>
-                                <td class="contact">GitHub</td>
-                                <td class="break">:</td>
-                                <td><a href="https://github.com/sashko-ua">sashko-ua</a></td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <ol class="tab__indicators">
-                        <li class="tab__indicator tab__indicator_active"></li>
-                        <li class="tab__indicator"></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section class="education " id="Education">
+    <aside class="sidepanel">
+        <a href="https://www.instagram.com/_sashko_ua_/" target="_blanck" class="sidepanel__link"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/sashko-ua" target="_blanck" class="sidepanel__link"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/sashko_shabl" target="_blanck" class="sidepanel__link"><i class="fab fa-telegram-plane"></i></a>
+        <div class="sidepanel__divider"></div>
+        <div class="sidepanel__text">Links</div>
+    </aside>
+    <section class="main">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2 class="title">Education</h2>
-                </div>
-                <div class="col-md-9">
-                    <div class="box">
-                        <div class="row">
-                            <div class="col-6 col-sm-6 col-md-6">
-                                <a class="image-link" href="img/education/HTML-Sololearn.jpg">
-                                    <img class="img" src="img/education/HTML-Sololearn.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-sm-6 col-md-6">
-                                <a class="image-link" href="img/education/CSS-Sololearn.jpg">
-                                    <img src="img/education/CSS-Sololearn.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-sm-6 col-md-6">
-                                <a class="image-link" href="img/education/Python-Sololearn.jpg">
-                                    <img src="img/education/Python-Sololearn.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="col-6 col-sm-6 col-md-6">
-                                <a class="image-link" href="img/education/HTML+CSS-Udemy.jpg">
-                                    <img src="img/education/HTML+CSS-Udemy.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="suptitle">My name is Oleksand Shablenskyi</div>
+            <h1 class="title main__title">I`m Junior Front-End <br> Developer</h1>
+            <div class="main__btns">
+                <a href="#" class="main__link btn">Portfolio</a>
+                <a href="#" class="main__link">About me</a>
             </div>
+
         </div>
     </section>
-
-    <section class="skills " id="Skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2 class="title">Skills</h2>
-                </div>
-                <div class="col-md-9">
-                    <div class="skills__box">
-                        <h2>HTML</h2>
-                        <div class="skills__bar">
-                            <div class="skills__value skills__value_html wow">81%</div>
-                        </div>
-                    </div>
-                    <div class="skills__box">
-                        <h2>CSS</h2>
-                        <div class="skills__bar">
-                            <div class="skills__value skills__value_css wow">73%</div>
-                        </div>
-                    </div>
-                    <div class="skills__box">
-                        <h2>JavaScript</h2>
-                        <div class="skills__bar">
-                            <div class="skills__value skills__value_js wow">40%</div>
-                        </div>
-                    </div>
-                    <div class="skills__box">
-                        <h2>Photoshop</h2>
-                        <div class="skills__bar">
-                            <div class="skills__value skills__value_photoshop wow">89%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="work " id="Work">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2 class="title">Work</h2>
-                </div>
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class=" col-md-6">
-                            <a href="projects/OPT/index.html" target="_blank">
-                                <img src="img/work/OPT.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="projects/MoGo/index.html" target="_blank">
-                                <img src="img/work/MoGo.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="projects/Piano/index.html" target="_blank">
-                                <img src="img/work/piano.png" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="http://myvoice.pro" target="_blank">
-                                <img src="img/work/MyVoice.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <a class="scroll-to" href="#Home">
-            <div class="arrow-up" id="arrow-up">
-                <div class="chevron-up"></div>
-                <div class="chevron-up"></div>
-                <div class="chevron-up"></div>
-            </div>
-        </a>
-    </section>
-
-    <div class="footer">
-        <div class="footer__social">
-            <a href="https://www.linkedin.com/in/sashko-shablenskyi-4b76881a3/">LinkedIn</a>
-        </div>
-        <div class="footer__social">
-            <a href="https://www.instagram.com/_sashko_ua_/">Instagram</a>
-        </div>
-        <div class="footer__social">
-            <a href="https://github.com/sashko-ua">GitHub</a>
-        </div>
-    </div>
-
-    <script src="js/typed.min.js"></script>
-    <script src="js/script.js"></script>
 </body>
-
-</html>
+</htm>
