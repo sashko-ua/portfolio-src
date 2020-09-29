@@ -44,7 +44,7 @@ const {
   webp = require("gulp-webp"),
   webphtml = require("gulp-webp-html");
 
-function browSync(parans) {
+function browSync() {
   browserSync.init({
     server: {
       baseDir: "./" + proj_folder + "/",
@@ -52,13 +52,6 @@ function browSync(parans) {
     port: 3000,
     notify: false,
   });
-}
-
-function watchFile(params) {
-  gulp.watch([path.watch.html], html);
-  gulp.watch([path.watch.css], css);
-  gulp.watch([path.watch.js], js);
-  gulp.watch([path.watch.img], images);
 }
 
 function clean(params) {
@@ -74,30 +67,22 @@ function html() {
 }
 
 function css() {
-  return (
-    src(path.src.css)
-    .pipe(
-      sass({
-        outputStyle: "expanded",
-      })
-    )
+  return src(path.src.css)
+    .pipe(sass({
+      outputStyle: "expanded",
+    }))
     .pipe(group_media())
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 5 versions"],
-        cascade: true,
-      })
-    )
+    .pipe(autoprefixer({
+      overrideBrowserslist: ["last 5 versions"],
+      cascade: true,
+    }))
     .pipe(dest(path.build.css))
     .pipe(clean_css())
-    .pipe(
-      rename({
-        extname: ".min.css",
-      })
-    )
+    .pipe(rename({
+      extname: ".min.css",
+    }))
     .pipe(dest(path.build.css))
-    .pipe(browserSync.stream())
-  );
+    .pipe(browserSync.stream());
 }
 
 function js() {
@@ -140,6 +125,13 @@ function images() {
 function fonts() {
   return src(path.src.fonts)
     .pipe(dest(path.build.fonts))
+}
+
+function watchFile() {
+  gulp.watch([path.watch.html], html);
+  gulp.watch([path.watch.css], css);
+  gulp.watch([path.watch.js], js);
+  gulp.watch([path.watch.img], images);
 }
 
 const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
