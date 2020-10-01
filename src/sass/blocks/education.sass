@@ -1,0 +1,64 @@
+.education
+    padding: 100px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 135px
+        padding: 60px 65px 0
+    &__column
+        position: relative
+        display: grid
+        grid-auto-rows: 1fr
+        row-gap: 40px
+        &-circle
+            &::after
+                content: ''
+                width: 15px
+                height: 15px
+                border-radius: 100%
+                background-color: $main-color
+                position: absolute
+                top: -40px
+                left: -7px
+    &__box
+        position: relative
+        padding: 0 0 0 35px
+        &::before
+            content: ''
+            width: 1px
+            height: calc( 100% + 40px )
+            position: absolute
+            left: 0
+            top: -40px
+            background-color: #000
+        &::after
+            content: ''
+            height: 1px
+            width: 35px
+            background-color: #000
+            position: absolute
+            left: 0
+            top: 15px
+        &-title
+            position: relative
+            padding: 0 0 0 80px
+            h4
+                margin: 0
+                line-height: 16px
+                font-size: 16px
+            h5
+                margin: 0
+                line-height: 25px
+                font-size: 14px
+                font-weight: 500
+        &-icon
+            @include before_circle
+            &::before
+                top: 0
+            img
+                position: absolute
+                left: 15px
+                top: 15px
+        &-body
+            padding: 10px 0 0
+            

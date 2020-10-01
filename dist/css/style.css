@@ -36,13 +36,7 @@ html {
   width: 60px;
   height: 3px;
   background-color: #FFA501;
-  margin: 25px 0 0;
-}
-
-.subtitle {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 60px;
+  margin: 25px auto 0;
 }
 
 .title {
@@ -66,6 +60,24 @@ html {
   border-radius: 100%;
   background-color: #FFA501;
   z-index: -1;
+}
+
+.title_center {
+  text-align: center;
+}
+
+.title_center::before {
+  top: -6px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 60px;
 }
 
 .btn {
@@ -396,4 +408,105 @@ html {
 .about__skills-title {
   font-weight: 700;
   margin: 0 0 6px;
+}
+
+.education {
+  padding: 100px 0 0;
+}
+
+.education__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 135px;
+     -moz-column-gap: 135px;
+          column-gap: 135px;
+  padding: 60px 65px 0;
+}
+
+.education__column {
+  position: relative;
+  display: grid;
+  grid-auto-rows: 1fr;
+  row-gap: 40px;
+}
+
+.education__column-circle::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #FFA501;
+  position: absolute;
+  top: -40px;
+  left: -7px;
+}
+
+.education__box {
+  position: relative;
+  padding: 0 0 0 35px;
+}
+
+.education__box::before {
+  content: '';
+  width: 1px;
+  height: calc( 100% + 40px);
+  position: absolute;
+  left: 0;
+  top: -40px;
+  background-color: #000;
+}
+
+.education__box::after {
+  content: '';
+  height: 1px;
+  width: 35px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+
+.education__box-title {
+  position: relative;
+  padding: 0 0 0 80px;
+}
+
+.education__box-title h4 {
+  margin: 0;
+  line-height: 16px;
+  font-size: 16px;
+}
+
+.education__box-title h5 {
+  margin: 0;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.education__box-icon::before {
+  content: '';
+  position: absolute;
+  top: -25%;
+  left: 0;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: #FFA501;
+  z-index: -1;
+}
+
+.education__box-icon::before {
+  top: 0;
+}
+
+.education__box-icon img {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.education__box-body {
+  padding: 10px 0 0;
 }
