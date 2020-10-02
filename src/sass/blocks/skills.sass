@@ -1,0 +1,47 @@
+.skills
+    padding: 100px 0 0
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 20px
+        padding: 70px 0 0
+    &__box
+        &-img
+            width: 30%
+            margin: 0 auto
+            img
+                width: 100%
+        &-title
+            margin: 20px 0 15px
+            font-weight: 700
+        &-descr
+            font-size: 13px
+            line-height: 20px
+
+    &__percent
+        margin: 100px 0 0
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-auto-rows: 1fr
+        column-gap: 50px
+        row-gap: 30px
+        &-box
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            height: 75px
+            .title
+                grid-column: 1
+            &-value
+                grid-column: 2
+                justify-self: end
+        &-progress
+            grid-column: 1/3
+            grid-row: 2/3
+            align-self: center
+            height: 15px
+            border-radius: 7px
+            background-color: #d4d4d4
+            &-value
+                background-color: $main-color
+                border-radius: 7px
+                height: 100%
