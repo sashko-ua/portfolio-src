@@ -6,9 +6,8 @@
   padding: 0;
 }
 
-picture {
-  width: 0;
-  height: 0;
+html {
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -606,7 +605,7 @@ picture {
 }
 
 .portfolio__wrapper {
-  padding: 50px 0 100px;
+  padding: 50px 0 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 250px);
@@ -621,6 +620,8 @@ picture {
 }
 
 .portfolio__wrapper a img {
+  -webkit-filter: blur(2.5px);
+          filter: blur(2.5px);
   height: 100%;
   -webkit-transition: all .6s;
   -o-transition: all .6s;
@@ -631,9 +632,11 @@ picture {
 }
 
 .portfolio__wrapper a img:hover {
-  -webkit-transform: scale(1) translatex(-15px);
-      -ms-transform: scale(1) translatex(-15px);
-          transform: scale(1) translatex(-15px);
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  -webkit-transform: scale(1) translatex(-95px);
+      -ms-transform: scale(1) translatex(-95px);
+          transform: scale(1) translatex(-95px);
 }
 
 .portfolio__wrapper .vertical {
@@ -661,4 +664,90 @@ picture {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
+  -webkit-transform: scale(1) translatex(0px);
+      -ms-transform: scale(1) translatex(0px);
+          transform: scale(1) translatex(0px);
+}
+
+.contacts {
+  padding: 100px 0;
+}
+
+.contacts .divider {
+  margin: 10px 0 20px;
+}
+
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 50px;
+}
+
+.contacts__descr {
+  padding: 6px 0 0;
+}
+
+.contacts__descr-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.contacts__descr-social a i {
+  color: #000;
+  margin: 15px 15px 15px 0;
+  font-size: 30px;
+}
+
+.contacts__descr-form {
+  margin: 15px 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.contacts__descr-form .name,
+.contacts__descr-form .email,
+.contacts__descr-form .textarea {
+  position: relative;
+}
+
+.contacts__descr-form label {
+  position: absolute;
+  top: -8px;
+  left: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+.contacts__descr-form input {
+  padding: 7px;
+  width: 100%;
+}
+
+.contacts__descr-form .textarea {
+  grid-column: 1/3;
+}
+
+.contacts__descr-form .textarea textarea {
+  padding: 10px;
+  width: 100%;
+  height: 170px;
+  resize: none;
+}
+
+.contacts__descr-btn {
+  display: block;
+  padding: 10px 15px;
+  margin: 0 auto;
+  border: none;
+  background-color: #FFA501;
+}
+
+.contacts__img {
+  display: grid;
+  justify-items: end;
 }

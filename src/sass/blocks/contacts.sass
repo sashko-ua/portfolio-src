@@ -1,0 +1,56 @@
+.contacts
+    padding: 100px 0
+    .divider
+        margin: 10px 0 20px
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        padding: 0 50px
+    &__descr
+        padding: 6px 0 0
+        &-text
+                font-weight: bold
+                font-size: 14px
+                line-height: 21px
+        &-social
+            a
+                i
+                    color: #000
+                    margin: 15px 15px 15px 0
+                    font-size: 30px
+        &-form
+            margin: 15px 0 20px
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 10px
+            .name, .email, .textarea
+                position: relative
+            label
+                position: absolute
+                top: -8px
+                left: 15px
+                font-weight: 500
+                font-size: 12px
+                line-height: 18px
+                background-color: #fff
+                padding: 0 10px
+            input
+                padding: 7px
+                width: 100%
+            .textarea
+                grid-column: 1/3
+                textarea
+                    padding: 10px
+                    width: 100%
+                    height: 170px
+                    resize: none
+        &-btn
+            display: block
+            padding: 10px 15px
+            margin: 0 auto
+            border: none
+            background-color: $main-color 
+
+    &__img
+        display: grid
+        justify-items: end
