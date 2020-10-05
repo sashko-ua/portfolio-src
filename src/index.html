@@ -89,18 +89,18 @@
             <span class="long"></span>
             <span></span>
         </div>
-        <div class="container">
-            <h1 class="title"> My name is Oleksand Shablenskyi </h1>
-            <div class="subtitle main__subtitle">I`m Junior Front-End <br> Developer</div>
-            <div class="main__btns">
-                <a href="#" class="main__link btn">Portfolio</a>
-                <a href="#" class="main__link">About me</a>
-            </div>
-
+        <div class="main__text">
+            <h1 class="title main__title"> My name is Oleksand Shablenskyi </h1>
+        <div class="subtitle main__subtitle">I`m Junior Front-End Developer</div>
         </div>
+        <div class="main__btns">
+            <a href="#" class="main__link btn">Portfolio</a>
+            <a href="#" class="main__link">About me</a>
+        </div>
+
     </section>
 
-    <section class="about">
+    <!-- <section class="about">
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
@@ -436,11 +436,11 @@
 
                     <form action="post" class="contacts__descr-form">
                         <div class="name">
-                            <input name="name" id="name" type="text">
+                            <input required name="name" id="name" type="text">
                             <label for="name">Name</label>
                         </div>
                         <div class="email">
-                            <input name="email" id="email" type="email">
+                            <input required name="email" id="email" type="email">
                             <label for="email">Email</label>
                         </div>
                         <div class="textarea">
@@ -449,7 +449,13 @@
                         </div>
                     </form>
 
-                    <button class="contacts__descr-btn">Send massage</button>
+                    <div class="contacts__triggers">
+                        <button class="contacts__triggers-btn">Send massage</button>
+                        <div class="contacts__triggers-policy">
+                            <input required type="checkbox" name="" id="">
+                            <span>I agree to the <a target="_blanck" href="policy.html">privacy policy</a></span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="contacts__img">
@@ -457,7 +463,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <script src="js/script.min.js"></script>
 </body>
