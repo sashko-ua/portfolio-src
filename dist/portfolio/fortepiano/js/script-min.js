@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).scroll(function(){$(this).scrollTop()>800?$(".arrow-up").fadeIn():$(".arrow-up").fadeOut()}),$('a[href^="#"]').bind("click",function(o){const t=$(this);$("html, body").stop().animate({scrollTop:$(t.attr("href")).offset().top},1e3),o.preventDefault()})});

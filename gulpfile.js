@@ -54,9 +54,9 @@ function browSync() {
   });
 }
 
-function clean(params) {
-  return del(path.clean);
-}
+// function clean(params) {
+//   return del(path.clean);
+// }
 
 function html() {
   return src(path.src.html)
@@ -134,7 +134,8 @@ function watchFile() {
   gulp.watch([path.watch.img], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+// clean
+const build = gulp.series(gulp.parallel(js, css, html, images, fonts));
 const watch = gulp.parallel(build, watchFile, browSync);
 
 exports.html = html;

@@ -39,11 +39,11 @@
 
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#">About my</a></li>
-                    <li class="menu__link"><a href="#">Education</a></li>
-                    <li class="menu__link"><a href="#">Skills</a></li>
-                    <li class="menu__link"><a href="#">Portfolio</a></li>
-                    <li class="menu__link"><a href="#">Contacts</a></li>
+                    <li class="menu__link"><a href="#about">About my</a></li>
+                    <li class="menu__link"><a href="#education">Education</a></li>
+                    <li class="menu__link"><a href="#skills">Skills</a></li>
+                    <li class="menu__link"><a href="#portfolio">Portfolio</a></li>
+                    <li class="menu__link"><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
 
@@ -66,7 +66,7 @@
         <div class="menu__overlay"></div>
     </div>
 
-    <section class="main">
+    <section class="main" id="main">
         <aside class="sidepanel">
             <a href="https://www.instagram.com/_sashko_ua_/" target="_blanck" class="sidepanel__link">
                 <i class="fab fa-instagram"></i>
@@ -89,10 +89,12 @@
             <span class="long"></span>
             <span></span>
         </div>
+
         <div class="main__text">
             <h1 class="title main__title"> My name is Oleksand Shablenskyi </h1>
-        <div class="subtitle main__subtitle">I`m Junior Front-End Developer</div>
+            <div class="subtitle main__subtitle">I`m Junior Front-End Developer</div>
         </div>
+
         <div class="main__btns">
             <a href="#" class="main__link btn">Portfolio</a>
             <a href="#" class="main__link">About me</a>
@@ -100,7 +102,7 @@
 
     </section>
 
-    <!-- <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
@@ -176,7 +178,7 @@
         </div>
     </section>
 
-    <section class="education">
+    <section class="education" id="education">
         <div class="container">
             <h2 class="title title_center">Education</h2>
             <div class="divider"></div>
@@ -271,7 +273,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h2 class="title title_center">Skills</h2>
             <div class="subtitle subtitle_center">What do i use</div>
@@ -380,29 +382,29 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="title title_center">Portfolio</h2>
             <div class="subtitle subtitle_center">My Work</div>
             <div class="divider"></div>
 
             <div class="portfolio__wrapper">
-                <a href="#">
+                <a target="_blanck" href="http://myvoice.pro/">
                     <img src="img/work/my-voice.jpg" alt="my-voice">
                 </a>
-                <a href="#">
+                <a target="_blanck" href="/portfolio/fortepiano">
                     <img src="img/work/piano.jpg" alt="piano">
                 </a>
-                <a href="#">
+                <a target="_blanck" href="/portfolio/food_udemy">
                     <img src="img/work/mogo.jpg" alt="mogo">
                 </a>
-                <a href="#" class="vertical">
+                <a target="_blanck" href="/portfolio/" class="vertical">
                     <img src="img/work/food_udemy-js.jpg" alt="food_udemy-js">
                 </a>
-                <a href="#">
+                <a target="_blanck" href="/portfolio/">
                     <img src="img/work/migration-test.jpg" alt="migration-test">
                 </a>
-                <a href="#" class="horizontal">
+                <a target="_blanck" href="/portfolio/" class="horizontal">
                     <img src="img/work/eatiz.jpg" alt="eatiz">
 
                 </a>
@@ -410,7 +412,7 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__descr">
@@ -422,11 +424,11 @@
                         <a href="https://www.instagram.com/_sashko_ua_/" target="_blanck" class="sidepanel__link">
                             <i class="fab fa-instagram"></i>
                         </a>
-            
+
                         <a href="https://github.com/sashko-ua" target="_blanck" class="sidepanel__link">
                             <i class="fab fa-github"></i>
                         </a>
-            
+
                         <a href="https://t.me/sashko_shabl" target="_blanck" class="sidepanel__link">
                             <i class="fab fa-telegram-plane"></i>
                         </a>
