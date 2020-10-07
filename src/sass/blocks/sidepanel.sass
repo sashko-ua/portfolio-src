@@ -1,5 +1,5 @@
 .sidepanel
-    position: absolute
+    position: fixed
     top: 25%
     left: 50px
     display: flex
@@ -21,3 +21,15 @@
             transform: rotate(-90deg) translatex(-25px)
     &__link
         color: #fff
+        font-size: 22px
+        &:hover
+            transform: scale(1.5)
+            color: $main-color
+            text-shadow: 0 0 25px $main-color
+    .blackColor
+        color: #000
+        &:hover
+            color: $main-color
+            text-shadow: 0 0 25px $main-color
+    .blackBG
+        background-color: #000
