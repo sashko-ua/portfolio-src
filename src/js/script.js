@@ -34,27 +34,23 @@ social.addEventListener('click', () => {
 // ----------ChangeColorForHamburger+Sidepanel----------
 
 const hamburgerSpans = document.querySelectorAll('.hamburger span'),
-    sidepanel = document.querySelectorAll('.sidepanel__link'),
+    sidepanelLink = document.querySelectorAll('.sidepanel__link'),
     divider = document.querySelector('.sidepanel__divider'),
     sidepanelText = document.querySelector('.sidepanel__text');
 
 window.addEventListener('scroll', () => {
-    if (pageYOffset > document.documentElement.clientHeight * .7) {
-        sidepanel.forEach(element => {
+    (pageYOffset > document.documentElement.clientHeight * .2) ? sidepanelText.style.color = '#000': sidepanelText.style.color = '#fff';
+
+    (pageYOffset > document.documentElement.clientHeight * .5) ? divider.classList.add('blackBG'): divider.classList.remove('blackBG');
+
+    if (pageYOffset > document.documentElement.clientHeight * .6) {
+        sidepanelLink.forEach(element => {
             element.classList.add('blackColor');
         });
-
-        divider.classList.add('blackBG');
-
-        sidepanelText.style.color = '#000';
     } else {
-        sidepanel.forEach(element => {
+        sidepanelLink.forEach(element => {
             element.classList.remove('blackColor');
         });
-
-        divider.classList.remove('blackBG');
-
-        sidepanelText.style.color = '#fff';
     }
 
     if (pageYOffset > document.documentElement.clientHeight) {
