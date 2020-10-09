@@ -2,14 +2,14 @@
 
 // ----------Hamburger----------
 
-const hamburger = document.querySelector('.hamburger'),
+const hamburgerWrapper = document.querySelector('.hamburger__wrapper'),
     menu = document.querySelector('.menu'),
     close = document.querySelector('.close'),
     overlay = document.querySelector('.menu__overlay'),
     links = document.querySelectorAll('.menu__link'),
     social = document.querySelector('.menu__social');
 
-hamburger.addEventListener('click', () => {
+hamburgerWrapper.addEventListener('click', () => {
     menu.classList.add('menu_active');
 });
 
@@ -33,7 +33,8 @@ social.addEventListener('click', () => {
 
 // ----------ChangeColorForHamburger+Sidepanel----------
 
-const hamburgerSpans = document.querySelectorAll('.hamburger span'),
+const hamburger = document.querySelector('.hamburger'),
+    hamburgerSpans = document.querySelectorAll('.hamburger span'),
     sidepanelLink = document.querySelectorAll('.sidepanel__link'),
     divider = document.querySelector('.sidepanel__divider'),
     sidepanelText = document.querySelector('.sidepanel__text');
@@ -57,10 +58,14 @@ window.addEventListener('scroll', () => {
         hamburgerSpans.forEach(element => {
             element.classList.add('black');
         });
+
+        hamburger.classList.add('hamburger_blackBG');
     } else {
         hamburgerSpans.forEach(element => {
             element.classList.remove('black');
         });
+
+        hamburger.classList.remove('hamburger_blackBG');
     }
 });
 

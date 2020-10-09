@@ -1,21 +1,26 @@
 .hamburger
     position: fixed
-    top: 20px
-    left: 2%
+    left: 1%
+    top: 4%
     height: 45px
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    align-items: flex-end
-    cursor: pointer
-    padding: 10px
+    z-index: 10
+    &__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        cursor: pointer
+        height: 100%
+        padding: 10px 15px
+
     span
         display: block
         width: 30px
         height: 4px
         background-color: #fff
     &:hover
-        align-items: flex-start
+        span
+            width: 40px
         .long
             background-color: $main-color
     .black
@@ -33,6 +38,7 @@
     visibility: hidden
     opacity: 0
     transition: all .6s
+    z-index: 11
     &_active
         left: 0
         visibility: visible
