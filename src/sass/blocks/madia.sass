@@ -140,6 +140,7 @@
         &__btns
             left: 5%
             bottom: 5%
+
     .sidepanel
         display: none
 
@@ -168,6 +169,27 @@
     .skills
         &__wrapper,  &__percent
             grid-template-columns: repeat(2, 1fr)
+
+    .portfolio
+        &__wrapper
+            a
+                img
+                    filter: blur(0)
+                    height: 100%
+                    transform: scale(1.1)
+                    &:hover
+                        transform: scale(1.1) translatex(0)
+                &:nth-child(3)
+                &:nth-child(5)
+                    img
+                        width: 100%
+                        transform: scale(1.1)
+                        &:hover
+                            transform: scale(1.1)
+                &:last-child
+                    img
+                        width: 100%
+                        transform: scale(1.1)
 
     .contacts
         padding: 0 0 70px
@@ -199,6 +221,7 @@
         &__btns
             left: 50%
             transform: translateX(-50%)
+            bottom: 7%
 
     .about
         &__wrapper
@@ -237,23 +260,19 @@
             a
                 border: .5px solid $main-color
                 img
-                    filter: blur(0)
-                    height: 100%
                 &:nth-child(3)
                     grid-row: unset
                     grid-column: unset
+                &:nth-child(5)
+                    grid-row: unset
+                    grid-column: unset
+                    img
+                        width: unset
                 &:last-child
                     grid-row: unset
                     grid-column: unset
                     img
                         height: 100%
-                        width: unset
-                &:nth-child(5)
-                    grid-row: unset
-                    grid-column: unset
-                    img
-                        height: 100%
-                        width: unset
 
 @media  ( max-width: 370px )
     .menu

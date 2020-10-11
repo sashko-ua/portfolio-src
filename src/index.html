@@ -422,30 +422,30 @@
                         </a>
                     </div>
 
-                    <div class="contacts__descr-text">Or leave your e-mail and i will contact you</div>
+                    <div class="contacts__text">Or leave your e-mail and i will contact you</div>
 
-                    <form action="post" class="contacts__descr-form">
+                    <form action="mailer/smart.php" method="POST" class="contacts__form">
                         <div class="name">
-                            <input required name="name" id="name" type="text">
+                            <input data-validate-field="name" maxlength="12" name="name" id="name" type="text">
                             <label for="name">Name</label>
                         </div>
                         <div class="email">
-                            <input required name="email" id="email" type="email">
+                            <input data-validate-field="email" name="email" id="email" type="email">
                             <label for="email">Email</label>
                         </div>
                         <div class="textarea">
                             <textarea id="textatea" name="text"></textarea>
                             <label for="taxtarea">Massage</label>
                         </div>
-                    </form>
 
-                    <div class="contacts__triggers">
-                        <button class="contacts__triggers-btn btn">Send massage</button>
+                        <button type="submit" class="contacts__triggers-btn btn">Send massage</button>
                         <div class="contacts__triggers-policy">
-                            <input required type="checkbox" name="" id="">
+                            <input data-validate-field="checkbox" type="checkbox" name="" id="">
                             <span>I agree to the <a target="_blanck" href="policy.html">privacy policy</a></span>
                         </div>
-                    </div>
+                    </form>
+
+
                 </div>
 
                 <div class="contacts__img">
@@ -455,6 +455,7 @@
         </div>
     </section>
 
+    <script src="js/just-validate.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 </htm>

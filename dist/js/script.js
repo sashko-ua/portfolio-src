@@ -98,3 +98,46 @@ function SmoothScrolling(element) {
         })
     }
 }
+
+// ----------Form----------
+// const form = document.querySelector('form');
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+
+// });
+
+function validationForm(selector, rules, successModal) {
+    new window.JustValidate(selector, {
+        rules: rules,
+        submitHander: (form) => {
+            const formData = new formData(form),
+                xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.readyState === 200) {
+                    console.log('Відправлено ');
+                }
+            }
+
+            xhr.open('POST', 'main.php', true);
+            xhr.send('formData');
+
+            form.reset();
+        }
+    });
+}
+
+validationForm('.contacts__form', {
+    email: {
+        required: true,
+        email: true
+    },
+    checkbox: {
+        required: true
+    },
+    name: {
+        required: true
+    }
+}, '.thanks-popup')
