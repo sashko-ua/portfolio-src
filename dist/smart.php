@@ -4,7 +4,6 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $text = $_POST['text'];
 
-
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
@@ -14,12 +13,12 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'oleksand.shabl@gmail.com';         // Наш логин
-$mail->Password = 'KKfvsljvjyflf25';                  // Наш пароль от ящика
+$mail->Username = 'oleksandr.shabl@gmail.com';                 // Наш логин
+$mail->Password = 'KKfvsljvjyflf25';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('oleksand.shabl@gmail.com', 'Portfolio');   // От кого письмо 
+$mail->setFrom('oleksandr.shabl@gmail.com', 'Portfolio');   // От кого письмо 
 $mail->addAddress('sashkoace@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
@@ -29,12 +28,12 @@ $mail->addAddress('sashkoace@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Данные';
+$mail->Subject = 'Хтось тобі написав!';
 $mail->Body    = '
-		Пользователь оставил данные <br> 
-	І\'мя: ' . $name . ' <br>
-	E-mail:  ' . $email . '<br>
-	Повідомлення:' . $text . '';
+	Ось цей персонаж: <br> 
+	Ім\'я: ' . $name . ' <br>
+	E-mail: ' . $email . '<br>
+	Повідомлення: ' . $text . '';
 
 if(!$mail->send()) {
     return false;

@@ -31,6 +31,7 @@ social.addEventListener('click', () => {
     menu.classList.remove('menu_active');
 });
 
+
 // ----------ChangeColorForHamburger+Sidepanel----------
 
 const hamburger = document.querySelector('.hamburger'),
@@ -69,6 +70,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
 // ----------SkillsAutoPercent----------
 
 const counters = document.querySelectorAll('.skills__percent-box-value'),
@@ -78,7 +80,9 @@ counters.forEach((item, i) => {
     lines[i].style.width = item.innerHTML;
 });
 
+
 // ----------Smooth Scrolling----------
+
 const anchors = document.querySelectorAll('a[href^="#"]');
 
 
@@ -97,47 +101,33 @@ function SmoothScrolling(element) {
             });
         })
     }
-}
+};
+
 
 // ----------Form----------
-// const form = document.querySelector('form');
 
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
+$('form').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: 'post',
+        url: 'smart.php',
+        data: $(this).serialize()
+    }).done(function () {
+        $(this).find('input').val('');
 
+        $('.modal').fadeIn('slow');
 
-// });
-
-function validationForm(selector, rules, successModal) {
-    new window.JustValidate(selector, {
-        rules: rules,
-        submitHander: (form) => {
-            const formData = new formData(form),
-                xhr = new XMLHttpRequest();
-
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.readyState === 200) {
-                    console.log('Відправлено ');
-                }
-            }
-
-            xhr.open('POST', 'main.php', true);
-            xhr.send('formData');
-
-            form.reset();
-        }
+        $('form').trigger('reset');
     });
-}
+    return false;
+});
 
-validationForm('.contacts__form', {
-    email: {
-        required: true,
-        email: true
-    },
-    checkbox: {
-        required: true
-    },
-    name: {
-        required: true
-    }
-}, '.thanks-popup')
+
+// ----------Modal----------
+
+const modal = document.querySelector('.modal'),
+    modalClose = document.querySelector('.modal__close');
+
+modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
