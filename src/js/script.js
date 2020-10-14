@@ -106,22 +106,71 @@ function SmoothScrolling(element) {
 
 // ----------Form----------
 
-$('form').submit(function (e) {
+const form = document.querySelector('.contacts__form');
+
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    $.ajax({
-        type: 'post',
-        url: 'smart.php',
-        data: $(this).serialize()
-    }).done(function () {
-        $(this).find('input').val('');
 
-        $('.modal').fadeIn('slow');
+    let error = formValidate(form);
 
-        $('form').trigger('reset');
-    });
-    return false;
+    let formData = new FormData(form);
+
+    if (error === 0) {
+        form.classList.add('sending')
+        let response = await fetch('sendmail.php', {
+            method: 'POST',
+            body: formData
+        });
+        if (response.ok) {
+            let result = await response.json();
+            form.reset();
+        } else {
+            alert('Помилка відправки')
+        }
+    }
 });
 
+function formValidate(form) {
+    const formReq = document.querySelectorAll('._required');
+    console.log(formReq);
+    let error = 0;
+
+    for (let i = 0; i < formReq.length; i++) {
+        const input = formReq[i];
+        formRemoveError(input);
+
+        if (input.classList.contains('email')) {
+            if (emailTest(input)) {
+                formAddError(input);
+                error++;
+            }
+        }
+
+        if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
+            formAddError(input);
+            error++;
+        }
+
+        if (input.value === '') {
+            formAddError(input);
+            error++;
+        }
+    }
+
+    return error;
+}
+
+function formAddError(input) {
+    input.classList.add('error');
+}
+
+function formRemoveError(input) {
+    input.classList.remove('error');
+}
+
+function emailTest(input) {
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
+}
 
 // ----------Modal----------
 
