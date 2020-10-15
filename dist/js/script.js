@@ -106,7 +106,10 @@ function SmoothScrolling(element) {
 
 // ----------Form----------
 
-const form = document.querySelector('.contacts__form');
+const form = document.querySelector('.contacts__form'),
+    loading = document.querySelector('.contacts'),
+    modalDone = document.querySelector('.modalDone'),
+    modalErr = document.querySelector('.modalErr');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -116,7 +119,7 @@ form.addEventListener('submit', async (e) => {
     let formData = new FormData(form);
 
     if (error === 0) {
-        form.classList.add('sending')
+        loading.classList.add('sending');
         let response = await fetch('sendmail.php', {
             method: 'POST',
             body: formData
@@ -124,15 +127,17 @@ form.addEventListener('submit', async (e) => {
         if (response.ok) {
             let result = await response.json();
             form.reset();
+            loading.classList.remove('sending');
+            modalDone.style.display = 'block';
         } else {
-            alert('Помилка відправки')
+            loading.classList.remove('sending');
+            modalErr.style.display = 'block';
         }
     }
 });
 
 function formValidate(form) {
     const formReq = document.querySelectorAll('._required');
-    console.log(formReq);
     let error = 0;
 
     for (let i = 0; i < formReq.length; i++) {
@@ -174,9 +179,13 @@ function emailTest(input) {
 
 // ----------Modal----------
 
-const modal = document.querySelector('.modal'),
-    modalClose = document.querySelector('.modal__close');
+const modalDoneClose = document.querySelector('.modal__closeDone'),
+    modalErrClose = document.querySelector('.modal__closeErr');
 
-modalClose.addEventListener('click', () => {
-    modal.style.display = 'none';
+modalDoneClose.addEventListener('click', () => {
+    modalDone.style.display = 'none';
+});
+
+modalErrClose.addEventListener('click', () => {
+    modalErr.style.display = 'none';
 });

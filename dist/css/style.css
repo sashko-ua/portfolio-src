@@ -603,8 +603,11 @@ html {
 
 .skills__wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 40px;
   padding: 70px 0 0;
 }
 
@@ -620,11 +623,7 @@ html {
 .skills__box-title {
   margin: 20px 0 15px;
   font-weight: 700;
-}
-
-.skills__box-descr {
-  font-size: 13px;
-  line-height: 20px;
+  text-align: center;
 }
 
 .skills__percent {
@@ -737,6 +736,25 @@ html {
 
 .contacts {
   padding: 30px 0 50px;
+}
+
+.contacts::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/loading_spinner.gif) center center/7% no-repeat, rgba(0, 0, 0, 0.8);
+  z-index: 15;
+  visibility: hidden;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.contacts.sending::after {
+  visibility: visible;
 }
 
 .contacts .divider {
@@ -913,6 +931,8 @@ html {
 .contacts .error + .contacts__checkbox-label::before {
   border: 1px solid red;
   border-radius: 100%;
+  -webkit-box-shadow: 0 0 15px red;
+          box-shadow: 0 0 15px red;
 }
 
 .contacts__img {
@@ -947,11 +967,11 @@ html {
   background-color: #FFA501;
   -webkit-box-shadow: 0 0 15px #FFA501;
           box-shadow: 0 0 15px #FFA501;
-  padding: 10px;
   z-index: 11;
 }
 
-.modal__close {
+.modal__closeDone,
+.modal__closeErr {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -963,7 +983,9 @@ html {
   position: absolute;
   top: 20%;
   text-align: center;
+  width: 100%;
   font-size: 20px;
+  padding: 10px;
 }
 
 .modal__done {
