@@ -425,6 +425,10 @@
                 <a target="blanck" href="/portfolio/fortepiano">
                     <img src="img/work/piano.jpg" alt="piano">
                 </a>
+
+                <a target="blanck" href="/portfolio/comfort_life">
+                    <img src="img/work/comfort_life.jpg" alt="comfort_life">
+                </a>
             </div>
         </div>
     </section>
@@ -453,14 +457,14 @@
 
                     <div class="contacts__text">Or leave your e-mail and I will contact you</div>
 
-                    <form action="#" class="contacts__form">
+                    <form action="#" class="contacts__form" autocomplete="on">
                         <div class="name">
                             <input name="name" id="name" type="text" class="_required">
                             <label for="name">Name*</label>
                         </div>
 
                         <div class="email">
-                            <input name="email" id="email" type="email" class="email _required">
+                            <input name="email" id="email" type="email" class="email _required" autocomplete="email">
                             <label for="email">Email*</label>
                         </div>
                         <div class="textarea">
@@ -501,7 +505,6 @@
         <div class="modal__box">
             <i class="modal__closeErr fas fa-times"></i>
             <div class="modal__text">Message sendind error <br> Sorry=(</div>
-            <i class="modal__done far fa-check-circle"></i>
         </div>
     </div>
 

@@ -81,6 +81,7 @@ counters.forEach((item, i) => {
 });
 
 
+
 // ----------Smooth Scrolling----------
 
 const anchors = document.querySelectorAll('a[href^="#"]');
