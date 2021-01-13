@@ -190,3 +190,12 @@ modalDoneClose.addEventListener('click', () => {
 modalErrClose.addEventListener('click', () => {
     modalErr.style.display = 'none';
 });
+
+// ----------TipingText----------
+
+const typed = new Typed('.main__title', {
+    strings: ["My name is Oleksandr", "I`m Junior Front-End Developer"],
+    typeSpeed: 80,
+    loop: true,
+    backSpeed: 50,
+});
