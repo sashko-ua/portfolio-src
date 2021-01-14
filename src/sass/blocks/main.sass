@@ -11,12 +11,17 @@
         left: 15%
         width: 700px
     &__title
+        display: block
         font-size: 22px
         line-height: 25px
     &__subtitle
         font-size: 58px
         line-height: 70px
-        padding: 40px 0
+    .typed-cursor
+        font-size: 36px
+        font-weight: normal
+        line-height: 10px
+
     &__link
         color: #fff
         text-decoration: none
@@ -25,10 +30,15 @@
             text-shadow: 0 0 15px $main-color
     &__btns
         position: absolute
-        bottom: 15%
+        bottom: -50px
         left: 15%
         display: flex
         justify-content: space-between
         align-items: center
         width: 250px
         font-weight: bold
+        opacity: 0
+        @include transition
+        &--active
+            bottom: 15%
+            opacity: 1

@@ -10,25 +10,25 @@ const hamburgerWrapper = document.querySelector('.hamburger__wrapper'),
     social = document.querySelector('.menu__social');
 
 hamburgerWrapper.addEventListener('click', () => {
-    menu.classList.add('menu_active');
+    menu.classList.add('menu--active');
 });
 
 close.addEventListener('click', () => {
-    menu.classList.remove('menu_active');
+    menu.classList.remove('menu--active');
 });
 
 overlay.addEventListener('click', () => {
-    menu.classList.remove('menu_active');
+    menu.classList.remove('menu--active');
 });
 
 links.forEach(e => {
     e.addEventListener('click', () => {
-        menu.classList.remove('menu_active');
+        menu.classList.remove('menu--active');
     });
 });
 
 social.addEventListener('click', () => {
-    menu.classList.remove('menu_active');
+    menu.classList.remove('menu--active');
 });
 
 
@@ -193,9 +193,23 @@ modalErrClose.addEventListener('click', () => {
 
 // ----------TipingText----------
 
-const typed = new Typed('.main__title', {
-    strings: ["My name is Oleksandr", "I`m Junior Front-End Developer"],
-    typeSpeed: 80,
-    loop: true,
-    backSpeed: 50,
+const typed = new Typed('.typed', {
+    strings: ['^1000 My name is Oleksandr ^300 <br> <span class="subtitle main__subtitle">I am Junior Front-End Developer</span>'],
+    typeSpeed: 15,
+    showCursor: false,
 });
+
+// ----------AnimationDelayMain----------
+
+const sidepanel = document.querySelector('.sidepanel'),
+    mainBTNS = document.querySelector('.main__btns');
+
+setInterval(() => {
+    hamburger.classList.add('hamburger--active');
+    sidepanel.classList.add('sidepanel--active');
+    mainBTNS.classList.add('main__btns--active')
+}, 3000);
+
+// ----------WOW-JS----------
+
+new WOW().init();

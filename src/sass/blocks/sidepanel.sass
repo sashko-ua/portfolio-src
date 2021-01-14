@@ -1,7 +1,7 @@
 .sidepanel
     position: fixed
     top: 24%
-    left: 3%
+    left: -50px
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -9,6 +9,11 @@
     align-items: center
     color: #fff
     z-index: 3
+    opacity: 0
+    @include transition
+    &--active
+        left: 3%
+        opacity: 1
     &__divider
         width: 2px
         height: 150px

@@ -10,26 +10,6 @@
   }
 }
 
-@-webkit-keyframes skills-opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes skills-opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 * {
   font-family: 'Poppins', sans-serif;
   -webkit-box-sizing: border-box;
@@ -71,6 +51,17 @@ html {
   margin: 25px auto 0;
 }
 
+.anim-items {
+  opacity: 0;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.anim-items--aitive {
+  opacity: 1;
+}
+
 .title {
   position: relative;
   z-index: 2;
@@ -79,6 +70,7 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+  height: 24px;
 }
 
 .title::before {
@@ -162,6 +154,7 @@ html {
 }
 
 .main__title {
+  display: block;
   font-size: 22px;
   line-height: 25px;
 }
@@ -169,7 +162,12 @@ html {
 .main__subtitle {
   font-size: 58px;
   line-height: 70px;
-  padding: 40px 0;
+}
+
+.main .typed-cursor {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 10px;
 }
 
 .main__link {
@@ -186,7 +184,7 @@ html {
 
 .main__btns {
   position: absolute;
-  bottom: 15%;
+  bottom: -50px;
   left: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,12 +197,21 @@ html {
           align-items: center;
   width: 250px;
   font-weight: bold;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.main__btns--active {
+  bottom: 15%;
+  opacity: 1;
 }
 
 .sidepanel {
   position: fixed;
   top: 24%;
-  left: 3%;
+  left: -50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,6 +228,15 @@ html {
           align-items: center;
   color: #fff;
   z-index: 3;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.sidepanel--active {
+  left: 3%;
+  opacity: 1;
 }
 
 .sidepanel__divider {
@@ -269,10 +285,19 @@ html {
 
 .hamburger {
   position: fixed;
-  left: 1%;
+  left: -50px;
   top: 4%;
   height: 45px;
   z-index: 10;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.hamburger--active {
+  left: 1%;
+  opacity: 1;
 }
 
 .hamburger__wrapper {
@@ -332,7 +357,7 @@ html {
   z-index: 11;
 }
 
-.menu_active {
+.menu--active {
   left: 0;
   visibility: visible;
   opacity: 1;
@@ -641,11 +666,6 @@ html {
           column-gap: 20px;
   row-gap: 40px;
   padding: 70px 0 0;
-}
-
-.skills__box {
-  -webkit-animation: skills-opacity 4s;
-          animation: skills-opacity 4s;
 }
 
 .skills__box-img {
