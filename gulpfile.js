@@ -13,7 +13,7 @@ const path = {
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     css: source_folder + "/sass/style.sass",
-    js: [source_folder + "/js/*.js", "!" + source_folder + "/js/_*.js"],
+    js: [source_folder + "/js/**/*.js", "!" + source_folder + "/js/script.js", "!" + source_folder + "/js/modules/*.js"],
     img: source_folder + "/img/**/*",
     fonts: source_folder + "/fonts/*.ttf",
   },
@@ -89,13 +89,13 @@ function js() {
   return src(path.src.js)
     .pipe(fileinclude())
     .pipe(dest(path.build.js))
-    .pipe(uglify())
-    .pipe(
-      rename({
-        extname: ".min.js",
-      })
-    )
-    .pipe(dest(path.build.js))
+    // .pipe(uglify())
+    // .pipe(
+    //   rename({
+    //     extname: ".min.js",
+    //   })
+    // )
+    // .pipe(dest(path.build.js))
     .pipe(browserSync.stream());
 }
 
